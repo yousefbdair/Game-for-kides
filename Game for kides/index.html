@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Adventure Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="game">
+
+   <h1>Math Adventure Game</h1>
+   <p class="sub">Pick a challenge and solve 10 questions!</p>
+
+   <div id="setup-screen">
+      <h2>1. Choose an operation</h2>
+      <div id="operation">
+         <button class="op-btn" data-op="+">&plus; <br> <small>Addition</small></button>
+         <button class="op-btn" data-op="-">&minus; <br> <small>Subtraction</small></button>
+         <button class="op-btn" data-op="*">&times; <br> <small>Multiplication</small></button>
+         <button class="op-btn" data-op="/">&divide; <br> <small>Division</small></button>
+      </div>
+
+      <h2>2. Choose a level</h2>
+      <select id="level">
+         <option value="easy">Easy (25 seconds)</option>
+         <option value="medium">Medium (20 seconds)</option>
+         <option value="hard">Hard (15 seconds)</option>
+      </select>
+
+      <button id="start-btn">Start Game</button>
+      <div id="warning"></div>
+   </div>
+
+   <div id="game-screen" class="hidden">
+      <div id="info">
+         <span class="pill">Question <span id="current">1</span> of 10</span>
+         <span class="pill">Score: <span id="score">0</span> | Answered: <span id="answered">0</span></span>
+         <span class="pill">&#9201; <span id="timer">20</span></span>
+      </div>
+
+      <div id="progress-bar">
+         <div id="progress"></div>
+      </div>
+
+      <div id="question"></div>
+
+      <div class="row">
+         <input type="number" id="answer" placeholder="Your answer">
+         <button id="check-btn">Check Answer</button>
+      </div>
+
+      <div id="feedback"></div>
+      <button id="next-btn" class="hidden">Next Question</button>
+   </div>
+
+   <div id="result-screen" class="hidden">
+      <div id="final-face"></div>
+      <div id="final-score"></div>
+      <div id="final-message"></div>
+      <button id="again-btn">Play Again</button>
+   </div>
+
+</div>
+
+<canvas id="fireworks"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
